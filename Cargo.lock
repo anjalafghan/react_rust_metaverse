@@ -3,5 +3,9 @@
 version = 4
 
 [[package]]
+name = "backend"
+version = "0.1.0"
+
+[[package]]
 name = "rust_react_metaverse"
 version = "0.1.0"
