@@ -1,14 +1,8 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+pub mod helloworld {
+    include!(concat!(env!("OUT_DIR"), "/helloworld.rs"));
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+    // Optional: re-export the useful modules
+    pub use self::greeter_server::{Greeter, GreeterServer};
+    pub use self::greeter_client::GreeterClient;
+    pub use self::{HelloReply as OtherHelloReply, HelloRequest as OtherHelloRequest};
 }
