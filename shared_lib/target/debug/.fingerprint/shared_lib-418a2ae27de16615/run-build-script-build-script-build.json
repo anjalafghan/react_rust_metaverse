@@ -1,1 +1,0 @@
-{"rustc":15497389221046826682,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[6057980335938689846,"build_script_build",false,11738246558148627986]],"local":[{"RerunIfChanged":{"output":"debug/build/shared_lib-418a2ae27de16615/output","paths":["../proto/helloworld.proto","../proto"]}}],"rustflags":[],"config":0,"compile_kind":0}
