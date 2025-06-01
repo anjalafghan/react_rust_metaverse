@@ -5,17 +5,18 @@
   </component>
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
-    <cargoProject FILE="$PROJECT_DIR$/backend/Cargo.toml" />
-    <cargoProject FILE="$PROJECT_DIR$/shared_lib/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b03e53c8-f4d1-41f8-bb1a-da89a1f97ad6" name="Changes" comment="added basic axum">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared_lib/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/shared_lib/target/.rustc_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/helloworld.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/helloworld.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_lib/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/shared_lib/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_lib/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/shared_lib/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_lib/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/shared_lib/build.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_lib/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/shared_lib/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -72,7 +74,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;axum__setup__new&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;axum__setup__refactor&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -200,6 +202,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added a couple of md files" />
