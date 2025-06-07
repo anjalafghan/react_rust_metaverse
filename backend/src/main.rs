@@ -1,5 +1,5 @@
 use tonic::{transport::Server, Request, Response, Status};
-
+use tracing_subscriber;
 use shared_lib::helloworld::{Greeter, GreeterServer, HelloReply, HelloRequest};
 
 #[derive(Debug, Default)]
@@ -11,7 +11,7 @@ impl Greeter for MyGreeter {
         &self,
         request: Request<HelloRequest>,
     ) -> Result<Response<HelloReply>, Status> {
-        println!("Got a request: {:?}", request);
+        tracing::info!("Got a request: {:?}", request);
 
         let reply = HelloReply {
             message: format!("Hello {}!", request.into_inner().name),
@@ -23,12 +23,23 @@ impl Greeter for MyGreeter {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let addr = "[::1]:50051".parse()?;
+    // Initialize logging
+    tracing_subscriber::fmt::init();
+
+    // Use a more flexible address that works for both IPv4 and IPv6
+    let addr = "[::0]:50051".parse()?;
     let greeter = MyGreeter::default();
+
+    tracing::info!("Starting gRPC server on {}", addr);
 
     Server::builder()
         .add_service(GreeterServer::new(greeter))
-        .serve(addr)
+        .serve_with_shutdown(addr, async {
+            tokio::signal::ctrl_c()
+                .await
+                .expect("Failed to install CTRL+C signal handler");
+            tracing::info!("Shutting down server...");
+        })
         .await?;
 
     Ok(())
