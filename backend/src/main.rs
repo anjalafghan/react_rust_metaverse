@@ -1,6 +1,6 @@
-use tonic::{transport::Server, Request, Response, Status};
-use tracing_subscriber;
 use shared_lib::helloworld::{Greeter, GreeterServer, HelloReply, HelloRequest};
+use tonic::{Request, Response, Status, transport::Server};
+use tracing_subscriber;
 
 #[derive(Debug, Default)]
 pub struct MyGreeter {}
